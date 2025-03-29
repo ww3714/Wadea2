@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wadea Web Design | Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .highlight {
+            color: #e67e22;
+        }
+        .welcome-box {
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .welcome-box h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .welcome-box img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #newsletter {
+            background: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        #newsletter input {
+            padding: 10px;
+            width: 60%;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .button_1 {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        /* زر الترجمة */
+        .translate-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .translate-button {
+            background: #e67e22;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><span class="highlight">Wadea</span> Web Design</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- زر الترجمة -->
+<div class="translate-container">
+    <button class="translate-button" onclick="toggleLanguage()">Translate</button>
+    <div id="google_translate_element"></div>
+</div>
+
+<section class="welcome-box">
+    <h1>Welcome to WADEA Website</h1>
+    <img src="My_ww.png" alt="My Website Image">
+</section>
+
+<section id="newsletter">
+    <h1>Subscribe To Our Newsletter</h1>
+    <form>
+        <input type="email" placeholder="Enter Email..." required>
+        <button type="submit" class="button_1">Subscribe</button>
+    </form>
+</section>
+
+<footer>
+    <p>Wadea Web Design, Copyright &copy; 2025</p>
+</footer>
+
+<!-- سكريبت الترجمة -->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'ar,en',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+
+     function toggleLanguage () {
+        var select = document.querySelector('.goog-te-combo');
+        if (select) {
+            if (select.value === 'en') {
+                select.value = 'ar'; // تغيير إلى العربية
+            } else {
+                select.value = 'en'; // تغيير إلى الإنجليزية
+            }
+            select.dispatchEvent(new Event('change')); // تنفيذ التغيير
+        } else {
+            alert("Please wait for the translation tool to load.");
+        }
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
